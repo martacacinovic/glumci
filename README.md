@@ -42,3 +42,6 @@ Skup podataka o glumcima sadrži sljedeće atribute:
 - **Datum početka rada**: 29.10.2023.
 - **Datum posljednjih izmjena**: 31.10.2023.
 - **Licenca**: CC BY-SA 4.0
+
+
+Skup podataka glumci © 2023 by Marta Čačinović is licensed under CC BY-SA 4.0 
