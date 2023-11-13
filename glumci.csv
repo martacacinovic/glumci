@@ -1,11 +1,49 @@
-ime,prezime,dob,datumrodenja,zemljarodenja,visinacm,networth$,filmovi,serije,nagrade
-Victoria,Pedretti,28,1995-10-23,USA,160,1000000,"[""Origin"", ""Shirley""]","[""You"", ""The Haunting of Hill House""]","[""MTV Award"", ""Saturn Award""]"
-Jennifer,Lawrence,33,1990-08-15,USA,175,160000000,"[""The Hunger Games"", ""Passengers"", ""No Hard Feelings"", ""Don't Look Up"", ""X-Men: First Class""]","[""Monk""]","[""Golden Globe"", ""SAG Award"", ""Academy Award""]"
-Angelina,Jolie,48,1975-06-04,USA,169,120000000,"[""Lara Croft: Tomb Raider"", ""The Tourist"", ""Maleficent""]","[""Entourage""]","[""Academy Award"", ""3 Golden Globe Awards""]"
-Margot,Robbie,33,1990-07-02,Australia,168,40000000,"[""Barbie"", ""Suicide Squad"", ""The Wolf of Wall Street""]","[""Neighbours""]","[""3 AACTA International Awards"", ""Empire Award"", ""People's Choice Award""]"
-Viola,Davis,58,1965-08-11,USA,165,25000000,"[""The Help"", ""The Woman King"", ""Fences""]","[""How to Get Away with Murder"", ""Sofia the First""]","[""Academy Award"", ""Emmy Award"", ""2 Tony Awards"", ""Golden Globe Award""]"
-Ryan,Reynolds,47,1976-10-23,Canada,188,350000000,"[""Deadpool"", ""Free Guy"", ""Green Lantern""]","[""The X-Files"", ""Scrubs"", ""Fifteen""]","[""Critic's Choice Award"", ""Saturn Award"", ""Teen Choice Award""]"
-Cillian,Murphy,47,1976-05-25,Ireland,172,20000000,"[""Inception"", ""Oppenheimer"", ""28 Days Later"", ""Red Eye""]","[""Peaky Blinders""]","[""Golden FIPA"", ""IFTA Award"", ""TV Choice Award""]"
-Timoth�e,Chalamet,27,1995-12-27,USA,178,25000000,"[""Dune"", ""Call Me by Your Name"", ""Bones and All"", ""Don't Look Up""]",,"[""Dorian Awards"", ""2 Hollywood Film Awards"", ""Independent Spirit Award""]"
-Noah,Schnapp,19,2004-10-03,USA,174,4000000,"[""The Tutor"", ""The Peanuts Movie""]","[""Stranger Things""]","[""MTV Movie Award"", ""People's Choice Award"", ""Teen Choice Award""]"
-Leonardo,DiCaprio,48,1974-11-11,USA,183,300000000,"[""Inception"", ""The Wolf Of Wall Street"", ""Don't Look Up"", ""The Revenant""]","[""Growing Pains"", ""Parenthood""]","[""Academy Award"", ""BAFTA"", ""3 Golden Globes""]"
+ime,prezime,dob,datumrodenja,zemljarodenja,visina,bojaociju,brojosvojenihoscara,networth,naslov
+Victoria,Pedretti,28,1995-03-23,USA,160,plava,0,1000000,You
+Victoria,Pedretti,28,1995-03-23,USA,160,plava,0,1000000,The Haunting of Hill House
+Victoria,Pedretti,28,1995-03-23,USA,160,plava,0,1000000,Origin
+Victoria,Pedretti,28,1995-03-23,USA,160,plava,0,1000000,Shirley
+Jennifer,Lawrence,33,1990-08-15,USA,175,plava,1,160000000,The Hunger Games
+Jennifer,Lawrence,33,1990-08-15,USA,175,plava,1,160000000,Passengers
+Jennifer,Lawrence,33,1990-08-15,USA,175,plava,1,160000000,No Hard Feelings
+Jennifer,Lawrence,33,1990-08-15,USA,175,plava,1,160000000,Don't Look Up
+Jennifer,Lawrence,33,1990-08-15,USA,175,plava,1,160000000,X-Men: First Class
+Jennifer,Lawrence,33,1990-08-15,USA,175,plava,1,160000000,Monk
+Angelina,Jolie,48,1975-06-04,USA,169,plava,1,120000000,Lara Croft: Tomb Raider
+Angelina,Jolie,48,1975-06-04,USA,169,plava,1,120000000,The Tourist
+Angelina,Jolie,48,1975-06-04,USA,169,plava,1,120000000,Maleficent
+Angelina,Jolie,48,1975-06-04,USA,169,plava,1,120000000,Entourage
+Margot,Robbie,33,1990-07-02,Australia,168,plava,1,40000000,Barbie
+Margot,Robbie,33,1990-07-02,Australia,168,plava,1,40000000,Suicide Squad
+Margot,Robbie,33,1990-07-02,Australia,168,plava,1,40000000,The Wolf of Wall Street
+Margot,Robbie,33,1990-07-02,Australia,168,plava,1,40000000,Neighbours
+Viola,Davis,58,1965-08-11,USA,165,smeđa,1,25000000,The Help
+Viola,Davis,58,1965-08-11,USA,165,smeđa,1,25000000,The Woman King
+Viola,Davis,58,1965-08-11,USA,165,smeđa,1,25000000,Fences
+Viola,Davis,58,1965-08-11,USA,165,smeđa,1,25000000,Suicide Squad
+Viola,Davis,58,1965-08-11,USA,165,smeđa,1,25000000,How to Get Away with Murder
+Viola,Davis,58,1965-08-11,USA,165,smeđa,1,25000000,Sofia the First
+Ryan,Reynolds,47,1976-10-23,Canada,188,smeđa,0,350000000,The X-Files
+Ryan,Reynolds,47,1976-10-23,Canada,188,smeđa,0,350000000,Deadpool
+Ryan,Reynolds,47,1976-10-23,Canada,188,smeđa,0,350000000,Free Guy
+Ryan,Reynolds,47,1976-10-23,Canada,188,smeđa,0,350000000,Green Lantern
+Ryan,Reynolds,47,1976-10-23,Canada,188,smeđa,0,350000000,Scrubs
+Ryan,Reynolds,47,1976-10-23,Canada,188,smeđa,0,350000000,Fifteen
+Cillian,Murphy,47,1976-05-25,Ireland,172,plava,0,20000000,Inception
+Cillian,Murphy,47,1976-05-25,Ireland,172,plava,0,20000000,Oppenheimer
+Cillian,Murphy,47,1976-05-25,Ireland,172,plava,0,20000000,28 Days Later
+Cillian,Murphy,47,1976-05-25,Ireland,172,plava,0,20000000,Red Eye
+Cillian,Murphy,47,1976-05-25,Ireland,172,plava,0,20000000,Peaky Blinders
+Timothée,Chalamet,27,1995-12-27,USA,178,zelena,0,25000000,Dune
+Timothée,Chalamet,27,1995-12-27,USA,178,zelena,0,25000000,Call Me by Your Name
+Timothée,Chalamet,27,1995-12-27,USA,178,zelena,0,25000000,Bones and All
+Timothée,Chalamet,27,1995-12-27,USA,178,zelena,0,25000000,Don't Look Up
+Noah,Schnapp,19,2004-10-03,USA,174,smeđa,0,4000000,The Tutor
+Noah,Schnapp,19,2004-10-03,USA,174,smeđa,0,4000000,The Peanuts Movie
+Noah,Schnapp,19,2004-10-03,USA,174,smeđa,0,4000000,Stranger Things
+Leonardo,DiCaprio,48,1974-11-11,USA,183,plava,1,300000000,The Revenant
+Leonardo,DiCaprio,48,1974-11-11,USA,183,plava,1,300000000,Inception
+Leonardo,DiCaprio,48,1974-11-11,USA,183,plava,1,300000000,The Wolf of Wall Street
+Leonardo,DiCaprio,48,1974-11-11,USA,183,plava,1,300000000,Don't Look Up
+Leonardo,DiCaprio,48,1974-11-11,USA,183,plava,1,300000000,Growing Pains
+Leonardo,DiCaprio,48,1974-11-11,USA,183,plava,1,300000000,Parenthood
