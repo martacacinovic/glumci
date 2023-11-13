@@ -1,1 +1,322 @@
-[{"ime" : "Victoria", "prezime" : "Pedretti", "filmovi" : ["Origin", "Shirley"], "serije" : ["You", "The Haunting of Hill House"], "nagrade" : ["MTV Award", "Saturn Award"], "dob" : 28, "datumrodenja" : "1995-10-23", "zemljarodenja" : "USA", "visinacm" : 160, "networth" : 1000000}, {"ime" : "Jennifer", "prezime" : "Lawrence", "filmovi" : ["The Hunger Games", "Passengers", "No Hard Feelings", "Don't Look Up", "X-Men: First Class"], "serije" : ["Monk"], "nagrade" : ["Golden Globe", "SAG Award", "Academy Award"], "dob" : 33, "datumrodenja" : "1990-08-15", "zemljarodenja" : "USA", "visinacm" : 175, "networth" : 160000000}, {"ime" : "Angelina", "prezime" : "Jolie", "filmovi" : ["Lara Croft: Tomb Raider", "The Tourist", "Maleficent"], "serije" : ["Entourage"], "nagrade" : ["Academy Award", "3 Golden Globe Awards"], "dob" : 48, "datumrodenja" : "1975-06-04", "zemljarodenja" : "USA", "visinacm" : 169, "networth" : 120000000}, {"ime" : "Margot", "prezime" : "Robbie", "filmovi" : ["Barbie", "Suicide Squad", "The Wolf of Wall Street"], "serije" : ["Neighbours"], "nagrade" : ["3 AACTA International Awards", "Empire Award", "People's Choice Award"], "dob" : 33, "datumrodenja" : "1990-07-02", "zemljarodenja" : "Australia", "visinacm" : 168, "networth" : 40000000}, {"ime" : "Viola", "prezime" : "Davis", "filmovi" : ["The Help", "The Woman King", "Fences"], "serije" : ["How to Get Away with Murder", "Sofia the First"], "nagrade" : ["Academy Award", "Emmy Award", "2 Tony Awards", "Golden Globe Award"], "dob" : 58, "datumrodenja" : "1965-08-11", "zemljarodenja" : "USA", "visinacm" : 165, "networth" : 25000000}, {"ime" : "Ryan", "prezime" : "Reynolds", "filmovi" : ["Deadpool", "Free Guy", "Green Lantern"], "serije" : ["The X-Files", "Scrubs", "Fifteen"], "nagrade" : ["Critic's Choice Award", "Saturn Award", "Teen Choice Award"], "dob" : 47, "datumrodenja" : "1976-10-23", "zemljarodenja" : "Canada", "visinacm" : 188, "networth" : 350000000}, {"ime" : "Cillian", "prezime" : "Murphy", "filmovi" : ["Inception", "Oppenheimer", "28 Days Later", "Red Eye"], "serije" : ["Peaky Blinders"], "nagrade" : ["Golden FIPA", "IFTA Award", "TV Choice Award"], "dob" : 47, "datumrodenja" : "1976-05-25", "zemljarodenja" : "Ireland", "visinacm" : 172, "networth" : 20000000}, {"ime" : "Timoth�e", "prezime" : "Chalamet", "filmovi" : ["Dune", "Call Me by Your Name", "Bones and All", "Don't Look Up"], "serije" : null, "nagrade" : ["Dorian Awards", "2 Hollywood Film Awards", "Independent Spirit Award"], "dob" : 27, "datumrodenja" : "1995-12-27", "zemljarodenja" : "USA", "visinacm" : 178, "networth" : 25000000}, {"ime" : "Noah", "prezime" : "Schnapp", "filmovi" : ["The Tutor", "The Peanuts Movie"], "serije" : ["Stranger Things"], "nagrade" : ["MTV Movie Award", "People's Choice Award", "Teen Choice Award"], "dob" : 19, "datumrodenja" : "2004-10-03", "zemljarodenja" : "USA", "visinacm" : 174, "networth" : 4000000}, {"ime" : "Leonardo", "prezime" : "DiCaprio", "filmovi" : ["Inception", "The Wolf Of Wall Street", "Don't Look Up", "The Revenant"], "serije" : ["Growing Pains", "Parenthood"], "nagrade" : ["Academy Award", "BAFTA", "3 Golden Globes"], "dob" : 48, "datumrodenja" : "1974-11-11", "zemljarodenja" : "USA", "visinacm" : 183, "networth" : 300000000}]
+{
+    "Dob": 28,
+    "Ime": "Victoria",
+    "Visina": 160,
+    "Prezime": "Pedretti",
+    "Net worth": 1000000,
+    "Boja ociju": "plava",
+    "Datum rodenja": "23.03.1995.",
+    "Zemlja rodenja": "USA",
+    "Filmovi i serije": [
+        {
+            "Vrsta": "serija",
+            "Naslov": "You"
+        },
+        {
+            "Vrsta": "serija",
+            "Naslov": "The Haunting of Hill House"
+        },
+        {
+            "Vrsta": "film",
+            "Naslov": "Origin"
+        },
+        {
+            "Vrsta": "film",
+            "Naslov": "Shirley"
+        }
+    ],
+    "Broj osvojenih Oscara": 0
+}
+{
+    "Dob": 33,
+    "Ime": "Jennifer",
+    "Visina": 175,
+    "Prezime": "Lawrence",
+    "Net worth": 160000000,
+    "Boja ociju": "plava",
+    "Datum rodenja": "15.08.1990.",
+    "Zemlja rodenja": "USA",
+    "Filmovi i serije": [
+        {
+            "Vrsta": "serija",
+            "Naslov": "Monk"
+        },
+        {
+            "Vrsta": "film",
+            "Naslov": "The Hunger Games"
+        },
+        {
+            "Vrsta": "film",
+            "Naslov": "Passengers"
+        },
+        {
+            "Vrsta": "film",
+            "Naslov": "No Hard Feelings"
+        },
+        {
+            "Vrsta": "film",
+            "Naslov": "Don't Look Up"
+        },
+        {
+            "Vrsta": "film",
+            "Naslov": "X-Men: First Class"
+        }
+    ],
+    "Broj osvojenih Oscara": 1
+}
+{
+    "Dob": 48,
+    "Ime": "Angelina",
+    "Visina": 169,
+    "Prezime": "Jolie",
+    "Net worth": 120000000,
+    "Boja ociju": "plava",
+    "Datum rodenja": "04.06.1975.",
+    "Zemlja rodenja": "USA",
+    "Filmovi i serije": [
+        {
+            "Vrsta": "serija",
+            "Naslov": "Entourage"
+        },
+        {
+            "Vrsta": "film",
+            "Naslov": "Lara Croft: Tomb Raider"
+        },
+        {
+            "Vrsta": "film",
+            "Naslov": "The Tourist"
+        },
+        {
+            "Vrsta": "film",
+            "Naslov": "Maleficent"
+        }
+    ],
+    "Broj osvojenih Oscara": 1
+}
+{
+    "Dob": 33,
+    "Ime": "Margot",
+    "Visina": 168,
+    "Prezime": "Robbie",
+    "Net worth": 40000000,
+    "Boja ociju": "plava",
+    "Datum rodenja": "02.07.1990.",
+    "Zemlja rodenja": "Australia",
+    "Filmovi i serije": [
+        {
+            "Vrsta": "serija",
+            "Naslov": "Neighbours"
+        },
+        {
+            "Vrsta": "film",
+            "Naslov": "Barbie"
+        },
+        {
+            "Vrsta": "film",
+            "Naslov": "Suicide Squad"
+        },
+        {
+            "Vrsta": "film",
+            "Naslov": "The Wolf of Wall Street"
+        }
+    ],
+    "Broj osvojenih Oscara": 1
+}
+{
+    "Dob": 58,
+    "Ime": "Viola",
+    "Visina": 165,
+    "Prezime": "Davis",
+    "Net worth": 25000000,
+    "Boja ociju": "smeđa",
+    "Datum rodenja": "11.08.1965.",
+    "Zemlja rodenja": "USA",
+    "Filmovi i serije": [
+        {
+            "Vrsta": "serija",
+            "Naslov": "How to Get Away with Murder"
+        },
+        {
+            "Vrsta": "serija",
+            "Naslov": "Sofia the First"
+        },
+        {
+            "Vrsta": "film",
+            "Naslov": "Suicide Squad"
+        },
+        {
+            "Vrsta": "film",
+            "Naslov": "The Help"
+        },
+        {
+            "Vrsta": "film",
+            "Naslov": "The Woman King"
+        },
+        {
+            "Vrsta": "film",
+            "Naslov": "Fences"
+        }
+    ],
+    "Broj osvojenih Oscara": 1
+}
+{
+    "Dob": 47,
+    "Ime": "Ryan",
+    "Visina": 188,
+    "Prezime": "Reynolds",
+    "Net worth": 350000000,
+    "Boja ociju": "smeđa",
+    "Datum rodenja": "23.10.1976.",
+    "Zemlja rodenja": "Canada",
+    "Filmovi i serije": [
+        {
+            "Vrsta": "serija",
+            "Naslov": "The X-Files"
+        },
+        {
+            "Vrsta": "serija",
+            "Naslov": "Scrubs"
+        },
+        {
+            "Vrsta": "serija",
+            "Naslov": "Fifteen"
+        },
+        {
+            "Vrsta": "film",
+            "Naslov": "Deadpool"
+        },
+        {
+            "Vrsta": "film",
+            "Naslov": "Free Guy"
+        },
+        {
+            "Vrsta": "film",
+            "Naslov": "Green Lantern"
+        }
+    ],
+    "Broj osvojenih Oscara": 0
+}
+{
+    "Dob": 47,
+    "Ime": "Cillian",
+    "Visina": 172,
+    "Prezime": "Murphy",
+    "Net worth": 20000000,
+    "Boja ociju": "plava",
+    "Datum rodenja": "25.05.1976.",
+    "Zemlja rodenja": "Ireland",
+    "Filmovi i serije": [
+        {
+            "Vrsta": "serija",
+            "Naslov": "Peaky Blinders"
+        },
+        {
+            "Vrsta": "film",
+            "Naslov": "Inception"
+        },
+        {
+            "Vrsta": "film",
+            "Naslov": "Oppenheimer"
+        },
+        {
+            "Vrsta": "film",
+            "Naslov": "28 Days Later"
+        },
+        {
+            "Vrsta": "film",
+            "Naslov": "Red Eye"
+        }
+    ],
+    "Broj osvojenih Oscara": 0
+}
+{
+    "Dob": 27,
+    "Ime": "Timothée",
+    "Visina": 178,
+    "Prezime": "Chalamet",
+    "Net worth": 25000000,
+    "Boja ociju": "zelena",
+    "Datum rodenja": "27.12.1995.",
+    "Zemlja rodenja": "USA",
+    "Filmovi i serije": [
+        {
+            "Vrsta": "film",
+            "Naslov": "Don't Look Up"
+        },
+        {
+            "Vrsta": "film",
+            "Naslov": "Dune"
+        },
+        {
+            "Vrsta": "film",
+            "Naslov": "Call Me by Your Name"
+        },
+        {
+            "Vrsta": "film",
+            "Naslov": "Bones and All"
+        }
+    ],
+    "Broj osvojenih Oscara": 0
+}
+{
+    "Dob": 19,
+    "Ime": "Noah",
+    "Visina": 174,
+    "Prezime": "Schnapp",
+    "Net worth": 4000000,
+    "Boja ociju": "smeđa",
+    "Datum rodenja": "03.10.2004.",
+    "Zemlja rodenja": "USA",
+    "Filmovi i serije": [
+        {
+            "Vrsta": "serija",
+            "Naslov": "Stranger Things"
+        },
+        {
+            "Vrsta": "film",
+            "Naslov": "The Tutor"
+        },
+        {
+            "Vrsta": "film",
+            "Naslov": "The Peanuts Movie"
+        }
+    ],
+    "Broj osvojenih Oscara": 0
+}
+{
+    "Dob": 48,
+    "Ime": "Leonardo",
+    "Visina": 183,
+    "Prezime": "DiCaprio",
+    "Net worth": 300000000,
+    "Boja ociju": "plava",
+    "Datum rodenja": "11.11.1974.",
+    "Zemlja rodenja": "USA",
+    "Filmovi i serije": [
+        {
+            "Vrsta": "serija",
+            "Naslov": "Growing Pains"
+        },
+        {
+            "Vrsta": "serija",
+            "Naslov": "Parenthood"
+        },
+        {
+            "Vrsta": "film",
+            "Naslov": "Don't Look Up"
+        },
+        {
+            "Vrsta": "film",
+            "Naslov": "The Wolf of Wall Street"
+        },
+        {
+            "Vrsta": "film",
+            "Naslov": "Inception"
+        },
+        {
+            "Vrsta": "film",
+            "Naslov": "The Revenant"
+        }
+    ],
+    "Broj osvojenih Oscara": 1
+}
