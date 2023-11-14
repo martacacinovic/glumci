@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Data Table</title>
+  <title>Tablica s glumcima</title>
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -54,7 +54,6 @@
       const dataBody = document.getElementById('data-body');
       const searchButton = document.getElementById('search-button');
 
-      // Funkcija za dohvaćanje podataka i punjenje tablice
       const fetchData = async (url) => {
         try {
           const response = await fetch(url);
@@ -66,22 +65,22 @@
         }
       };
 
-      // Funkcija za filtriranje podataka prema zadanim kriterijima
+      
       const filterData = (data, attribute, searchText) => {
         return data.filter((row) => {
           if (attribute === 'all') {
-            // Pretraži sve atribute
+            
             return Object.values(row).some((value) =>
               String(value).toLowerCase().includes(searchText.toLowerCase())
             );
           } else {
-            // Pretraži samo odabrani atribut
+            
             return String(row[attribute]).toLowerCase().includes(searchText.toLowerCase());
           }
         });
       };
 
-      // Funkcija za prikaz rezultata u tablici
+    
       const renderTable = (filteredData) => {
         dataBody.innerHTML = '';
         filteredData.forEach((row) => {
@@ -96,7 +95,6 @@
         });
       };
 
-      // Event listener za gumb pretraživanja
       searchButton.addEventListener('click', async () => {
         const searchText = document.getElementById('search-text').value;
         const searchAttribute = document.getElementById('search-attribute').value;
@@ -110,16 +108,14 @@
         }
       });
 
-      // Inicijalno dohvati podatke i prikaži sve u tablici
+     
       fetchData('http://localhost:3000/api/data')
         .then((data) => renderTable(data))
         .catch((error) => console.error('Error:', error));
     });
 
-    // Postavi roditeljski dokument kako bi bio dostupan unutar iframe-a
     const parentWindow = window.parent;
 
-    // Kreiraj funkciju za slanje podataka roditeljskom dokumentu
     const sendTableData = () => {
       const table = document.getElementById('data-table');
       const rows = Array.from(table.querySelectorAll('tr'));
@@ -135,7 +131,6 @@
       parentWindow.postMessage({ type: 'tableData', data: tableData }, '*');
     };
 
-    // Dodaj event listener koji će čekati poruku od roditeljskog dokumenta
     window.addEventListener('message', function (event) {
       if (event.data.type === 'getTableData') {
         sendTableData();
