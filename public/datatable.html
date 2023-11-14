@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Data Table</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <h1>Tablica s glumcima</h1>
+  <div id="search-form">
+    <label for="search-text">Polje za pretraživanje:</label>
+    <input type="text" id="search-text" name="search-text" placeholder="Upiši željeni tekst">
+    
+    <label for="search-attribute">Traži po atributu:</label>
+    <select id="search-attribute" name="search-attribute">
+      <option value="all">Sve (wildcard)</option>
+      <option value="ime">Ime</option>
+      <option value="prezime">Prezime</option>
+      <option value="dob">Dob</option>
+      <option value="datumrodenja">Datum rodenja</option>
+      <option value="zemljarodenja">Zemlja rodenja</option>
+      <option value="visina">Visina</option>
+      <option value="bojaociju">Boja ociju</option>
+      <option value="brojosvojenihoscara">Broj osvojenih Oscara</option>
+      <option value="networth">Networth</option>
+      <option value="naslovfilmaserije">Glumi u</option>
+    </select>
+
+    <button id="search-button">Pretraži</button>
+  </div>
+
+  <table id="data-table">
+    <thead>
+      <tr>
+        <th>Ime</th>
+        <th>Prezime</th>
+        <th>Dob</th>
+        <th>Datum rođenja</th>
+        <th>Zemlja rođenja</th>
+        <th>Visina u cm</th>
+        <th>Boja očiju</th>
+        <th>Broj osvojenih Oscara</th>
+        <th>Net worth u $</th>
+        <th>Glumi u</th>
+      </tr>
+    </thead>
+    <tbody id="data-body"></tbody>
+  </table>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      const dataTable = document.getElementById('data-table');
+      const dataBody = document.getElementById('data-body');
+      const searchButton = document.getElementById('search-button');
+
+      // Funkcija za dohvaćanje podataka i punjenje tablice
+      const fetchData = async (url) => {
+        try {
+          const response = await fetch(url);
+          const data = await response.json();
+          return data;
+        } catch (error) {
+          console.error('Error:', error);
+          throw error;
+        }
+      };
+
+      // Funkcija za filtriranje podataka prema zadanim kriterijima
+      const filterData = (data, attribute, searchText) => {
+        return data.filter((row) => {
+          if (attribute === 'all') {
+            // Pretraži sve atribute
+            return Object.values(row).some((value) =>
+              String(value).toLowerCase().includes(searchText.toLowerCase())
+            );
+          } else {
+            // Pretraži samo odabrani atribut
+            return String(row[attribute]).toLowerCase().includes(searchText.toLowerCase());
+          }
+        });
+      };
+
+      // Funkcija za prikaz rezultata u tablici
+      const renderTable = (filteredData) => {
+        dataBody.innerHTML = '';
+        filteredData.forEach((row) => {
+          const formattedDate = new Date(row.datumrodenja).toLocaleDateString('en-GB', {
+            day: '2-digit',
+            month: '2-digit',
+            year: 'numeric'
+          });
+          const tr = document.createElement('tr');
+          tr.innerHTML = `<td>${row.ime}</td><td>${row.prezime}</td><td>${row.dob}</td><td>${formattedDate}</td><td>${row.zemljarodenja}</td><td>${row.visina}</td><td>${row.bojaociju}</td><td>${row.brojosvojenihoscara}</td><td>${row.networth}</td><td>${row.naslovfilmaserije}</td>`;
+          dataBody.appendChild(tr);
+        });
+      };
+
+      // Event listener za gumb pretraživanja
+      searchButton.addEventListener('click', async () => {
+        const searchText = document.getElementById('search-text').value;
+        const searchAttribute = document.getElementById('search-attribute').value;
+
+        try {
+          const data = await fetchData('http://localhost:3000/api/data');
+          const filteredData = filterData(data, searchAttribute, searchText);
+          renderTable(filteredData);
+        } catch (error) {
+          console.error('Error:', error);
+        }
+      });
+
+      // Inicijalno dohvati podatke i prikaži sve u tablici
+      fetchData('http://localhost:3000/api/data')
+        .then((data) => renderTable(data))
+        .catch((error) => console.error('Error:', error));
+    });
+
+    // Postavi roditeljski dokument kako bi bio dostupan unutar iframe-a
+    const parentWindow = window.parent;
+
+    // Kreiraj funkciju za slanje podataka roditeljskom dokumentu
+    const sendTableData = () => {
+      const table = document.getElementById('data-table');
+      const rows = Array.from(table.querySelectorAll('tr'));
+      const tableData = rows.slice(1).map(row => {
+        const columns = Array.from(row.querySelectorAll('td'));
+        const rowData = {};
+        columns.forEach((column, index) => {
+          const columnName = table.rows[0].cells[index].textContent.toLowerCase().replace(/\s/g, '');
+          rowData[columnName] = column.textContent;
+        });
+        return rowData;
+      });
+      parentWindow.postMessage({ type: 'tableData', data: tableData }, '*');
+    };
+
+    // Dodaj event listener koji će čekati poruku od roditeljskog dokumenta
+    window.addEventListener('message', function (event) {
+      if (event.data.type === 'getTableData') {
+        sendTableData();
+      }
+    });
+  </script>
+</body>
+</html>

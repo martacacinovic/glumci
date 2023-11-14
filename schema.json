@@ -1,0 +1,187 @@
+{
+    "$schema": "https://json-schema.org/draft/2019-09/schema",
+    "$id": "https://github.com/martacacinovic/glumci/blob/main/schema.json",
+    "type": "object",
+    "default": {},
+    "title": "Skup podataka o glumcima",
+    "required": [
+        "Dob",
+        "Ime",
+        "Visina",
+        "Prezime",
+        "Net worth",
+        "Boja ociju",
+        "Datum rodenja",
+        "Zemlja rodenja",
+        "Filmovi i serije",
+        "Broj osvojenih Oscara"
+    ],
+    "properties": {
+        "Dob": {
+            "type": "integer",
+            "default": 0,
+            "title": "The Dob Schema",
+            "examples": [
+                28
+            ]
+        },
+        "Ime": {
+            "type": "string",
+            "default": "",
+            "title": "The Ime Schema",
+            "examples": [
+                "Victoria"
+            ]
+        },
+        "Visina": {
+            "type": "integer",
+            "default": 0,
+            "title": "The Visina Schema",
+            "examples": [
+                160
+            ]
+        },
+        "Prezime": {
+            "type": "string",
+            "default": "",
+            "title": "The Prezime Schema",
+            "examples": [
+                "Pedretti"
+            ]
+        },
+        "Net worth": {
+            "type": "integer",
+            "default": 0,
+            "title": "The Net worth Schema",
+            "examples": [
+                1000000
+            ]
+        },
+        "Boja ociju": {
+            "type": "string",
+            "default": "",
+            "title": "The Boja ociju Schema",
+            "examples": [
+                "plava"
+            ]
+        },
+        "Datum rodenja": {
+            "type": "string",
+            "default": "",
+            "title": "The Datum rodenja Schema",
+            "examples": [
+                "23.03.1995."
+            ]
+        },
+        "Zemlja rodenja": {
+            "type": "string",
+            "default": "",
+            "title": "The Zemlja rodenja Schema",
+            "examples": [
+                "USA"
+            ]
+        },
+        "Filmovi i serije": {
+            "type": "array",
+            "default": [],
+            "title": "The Filmovi i serije Schema",
+            "items": {
+                "type": "object",
+                "title": "A Schema",
+                "required": [
+                    "Vrsta",
+                    "Naslov"
+                ],
+                "properties": {
+                    "Vrsta": {
+                        "type": "string",
+                        "title": "The Vrsta Schema",
+                        "examples": [
+                            "serija",
+                            "film"
+                        ]
+                    },
+                    "Naslov": {
+                        "type": "string",
+                        "title": "The Naslov Schema",
+                        "examples": [
+                            "You",
+                            "The Haunting of Hill House",
+                            "Origin",
+                            "Shirley"
+                        ]
+                    }
+                },
+                "examples": [{
+                    "Vrsta": "serija",
+                    "Naslov": "You"
+                },
+                {
+                    "Vrsta": "serija",
+                    "Naslov": "The Haunting of Hill House"
+                },
+                {
+                    "Vrsta": "film",
+                    "Naslov": "Origin"
+                },
+                {
+                    "Vrsta": "film",
+                    "Naslov": "Shirley"
+                }]
+            },
+            "examples": [
+                [{
+                    "Vrsta": "serija",
+                    "Naslov": "You"
+                },
+                {
+                    "Vrsta": "serija",
+                    "Naslov": "The Haunting of Hill House"
+                },
+                {
+                    "Vrsta": "film",
+                    "Naslov": "Origin"
+                },
+                {
+                    "Vrsta": "film",
+                    "Naslov": "Shirley"
+                }]
+            ]
+        },
+        "Broj osvojenih Oscara": {
+            "type": "integer",
+            "default": 0,
+            "title": "The Broj osvojenih Oscara Schema",
+            "examples": [
+                0
+            ]
+        }
+    },
+    "examples": [{
+        "Dob": 28,
+        "Ime": "Victoria",
+        "Visina": 160,
+        "Prezime": "Pedretti",
+        "Net worth": 1000000,
+        "Boja ociju": "plava",
+        "Datum rodenja": "23.03.1995.",
+        "Zemlja rodenja": "USA",
+        "Filmovi i serije": [{
+            "Vrsta": "serija",
+            "Naslov": "You"
+        },
+        {
+            "Vrsta": "serija",
+            "Naslov": "The Haunting of Hill House"
+        },
+        {
+            "Vrsta": "film",
+            "Naslov": "Origin"
+        },
+        {
+            "Vrsta": "film",
+            "Naslov": "Shirley"
+        }],
+        "Broj osvojenih Oscara": 0
+    }]
+}

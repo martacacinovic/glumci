@@ -1,0 +1,52 @@
+/* styles.css */
+
+body {
+  font-family: Arial, sans-serif;
+}
+
+h1 {
+  text-align: center;
+  color: #290d0d;
+}
+
+#search-form {
+  margin-bottom: 20px;
+}
+
+#search-form label {
+  margin-right: 10px;
+}
+
+#search-text,
+#search-attribute {
+  margin-right: 10px;
+}
+
+#data-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+#data-table th,
+#data-table td {
+  border: 1px solid #ce5a5add;
+  padding: 8px;
+  text-align: left;
+}
+
+#data-table th {
+  background-color: #e94c4c;
+}
+
+#data-table tbody tr:nth-child(even) {
+  background-color: #be4f4f;
+}
+
+#data-table tbody tr:nth-child(odd) {
+  background-color: #d25b5b;
+}
+
+#data-table tbody tr:hover {
+  background-color: #dcb2b2;
+}
