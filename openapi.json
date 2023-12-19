@@ -1,0 +1,193 @@
+{
+  "openapi": "3.0.3",
+  "info": {
+    "title": "Skup podataka o glumcima API",
+    "version": "1.0.0",
+    "description": "API za rad s podacima o glumcima",
+    "contact": {
+      "name": "Marta Čačinović",
+      "email": "mc53256@fer.hr"
+    }
+  },
+  "paths": {
+    "/api/data": {
+      "get": {
+        "summary": "Dohvati sve podatke o glumcima",
+        "responses": {
+          "200": {
+            "description": "Uspješan upit",
+            "content": {
+              "application/json": {
+                "example": {
+                  "data": [
+                    {
+                      "ime": "Victoria",
+                      "prezime": "Pedretti",
+                      "dob": "28",
+                      "datumrodenja": "23/03/1995",
+                      "zemljarodenja": "USA",
+                      "visina": "160",
+                      "bojaociju": "plava",
+                      "brojosvojenihoscara": 0,
+                      "networth": "1000000",
+                      "naslovfilmaserije": "You"
+                    },
+                  ]
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Internal Server Error"
+          }
+        }
+      }
+    },
+    "/api/add": {
+      "post": {
+        "summary": "Dodaj novog glumca",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "example": {
+                "ime": "Florence",
+                "prezime": "Pugh",
+                "dob": "27",
+                "datumrodenja": "03/01/1996",
+                "zemljarodenja": "UK",
+                "visina": "162",
+                "bojaociju": "zelena",
+                "brojosvojenihoscara": 0,
+                "networth": "8000000",
+                "naslov": "Black Widow"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Uspješno dodan glumac",
+            "content": {
+              "application/json": {
+                "example": {
+                  "message": "Uspješno dodano!"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Bad Request",
+            "content": {
+              "application/json": {
+                "example": {
+                  "error": "Svi atributi moraju biti dostavljeni."
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Internal Server Error"
+          }
+        }
+      }
+    },
+    "/api/update": {
+      "put": {
+        "summary": "Ažuriraj podatke o glumcu",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "example": {
+                "ime": "Florence",
+                "prezime": "Pugh",
+                "dob": "27",
+                "datumrodenja": "03/01/1996",
+                "zemljarodenja": "UK",
+                "visina": "162",
+                "bojaociju": "zelena",
+                "brojosvojenihoscara": 0,
+                "networth": "8000000",
+                "naslov": "Little Women"
+              }
+            }
+          },
+          "responses": {
+            "200": {
+              "description": "Uspješno ažurirani podaci",
+              "content": {
+                "application/json": {
+                  "example": {
+                    "message": "Uspješno ažurirano!"
+                  }
+                }
+              }
+            },
+            "400": {
+              "description": "Bad Request",
+              "content": {
+                "application/json": {
+                  "example": {
+                    "error": "Ime i prezime mora biti upisano i barem jedan dodatni atribut."
+                  }
+                }
+              }
+            },
+            "404": {
+              "description": "Not Found",
+              "content": {
+                "application/json": {
+                  "example": {
+                    "error": "Glumac nije pronađen."
+                  }
+                }
+              }
+            },
+            "500": {
+              "description": "Internal Server Error"
+            }
+          }
+        }
+      }
+    },
+    "/api/delete": {
+      "delete": {
+        "summary": "Izbriši glumca",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "example": {
+                "ime": "Florence",
+                "prezime": "Pugh"
+              }
+            }
+          },
+          "responses": {
+            "200": {
+              "description": "Uspješno izbrisan glumac",
+              "content": {
+                "application/json": {
+                  "example": {
+                    "message": "Uspješno izbrisano!"
+                  }
+                }
+              }
+            },
+            "404": {
+              "description": "Not Found",
+              "content": {
+                "application/json": {
+                  "example": {
+                    "error": "Glumac nije pronađen."
+                  }
+                }
+              }
+            },
+            "500": {
+              "description": "Internal Server Error"
+            }
+          }
+        }
+      }
+    }
+  }
+}
