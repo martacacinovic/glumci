@@ -24,303 +24,86 @@
   <h1>Skup podataka o glumcima</h1>
 
   <div id="download-links">
-    <a href="#" id="download-csv" download="data.csv">Preuzmi CSV</a>
-    <a href="#" id="download-json" download="data.json">Preuzmi JSON</a>
+    <!-- <a href="/refresh-exports" id="download-json" download="data.json">Osvježi preslike</a> -->
+    <a href="/refresh-exports" id="download-csv" download="data.csv">Preuzmi CSV</a>
+    <a href="/refresh-exports" id="download-json" download="data.json">Preuzmi JSON</a>
   </div>
+    <!-- Ako je korisnik prijavljen -->
+    <a href="/user-profile">Korisnički profil</a>
+    <!-- <a href="/refresh-exports" id="download-json" id="download-csv" download="data.json" download="data.csv">Osvježi preslike</a> -->
+    <a href="/refresh-exports" id="refresh-exports">Osvježi preslike</a>
+    <a href="/logout">Odjava</a>
+    <!-- <a href="#" onclick="logout()">Odjava</a> -->
 
-  <div id="add-form">
-    <h2>Dodaj glumca</h2>
-    <label for="ime">Ime:</label>
-    <input type="text" id="ime" required>
-
-    <label for="prezime">Prezime:</label>
-    <input type="text" id="prezime" required>
-
-    <label for="dob">Dob:</label>
-    <input type="text" id="dob" required>
-
-    <label for="datumrodenja">Datum rođenja:</label>
-    <input type="date" id="datumrodenja" required>
-
-    <label for="zemljarodenja">Zemlja rođenja:</label>
-    <input type="text" id="zemljarodenja" required>
-
-    <label for="visina">Visina:</label>
-    <input type="text" id="visina" required>
-
-    <label for="bojaociju">Boja očiju:</label>
-    <input type="text" id="bojaociju" required>
-
-    <label for="brojosvojenihoscara">Broj osvojenih Oscara:</label>
-    <input type="number" id="brojosvojenihoscara" required>
-
-    <label for="networth">Net worth:</label>
-    <input type="text" id="networth" required>
-
-    <label for="naslov">Naslov filma/serije:</label>
-    <input type="text" id="naslov" required>
-
-    <label for="vrsta">Vrsta (film/serija):</label>
-    <select id="vrsta" required>
-      <option value="film">Film</option>
-      <option value="serija">Serija</option>
-    </select>
-
-    <button onclick="addActor()">Dodaj glumca</button>
-  </div>
-
-  <div id="error-message" style="color: red;"></div>
-
-
-
-
-  <div id="update-section">
-    <h2>Ažuriraj glumca</h2>
-    <form id="update-form">
-      <label for="update-ime">Ime:</label>
-      <input type="text" id="update-ime" name="ime" required>
-
-      <label for="update-prezime">Prezime:</label>
-      <input type="text" id="update-prezime" name="prezime" required>
-
-      <label for="update-dob">Dob:</label>
-      <input type="text" id="update-dob">
-
-      <label for="update-datumrodenja">Datum rođenja:</label>
-      <input type="date" id="update-datumrodenja">
-
-      <label for="update-zemljarodenja">Zemlja rođenja:</label>
-      <input type="text" id="update-zemljarodenja">
-
-      <label for="update-visina">Visina:</label>
-      <input type="text" id="update-visina">
-
-      <label for="update-bojaociju">Boja očiju:</label>
-      <input type="text" id="update-bojaociju">
-
-      <label for="update-brojosvojenihoscara">Broj osvojenih Oscara:</label>
-      <input type="number" id="update-brojosvojenihoscara">
-
-      <label for="update-networth">Net worth:</label>
-      <input type="text" id="update-networth">
-
-      <label for="update-naslov">Naslov filma/serije:</label>
-      <input type="text" id="update-naslov">
-
-      <button type="button" onclick="updateActor()">Ažuriraj</button>
-
-    </form>
-  </div>
-  <div id="error-message" style="color: red;"></div>
-
-
-
-  <div id="delete-section">
-    <h2>Izbriši glumca</h2>
-    <form id="delete-form">
-      <label for="delete-ime">Ime:</label>
-      <input type="text" id="delete-ime" name="ime" required>
-  
-      <label for="delete-prezime">Prezime:</label>
-      <input type="text" id="delete-prezime" name="prezime" required>
-  
-      <button type="button" onclick="deleteActor()">Izbriši</button>
-    </form>
-  </div>
-  <div id="error-message" style="color: red;"></div>
+    <!-- Ako korisnik nije prijavljen -->
+    <a href="/login">Prijava</a>
+ 
+   <!-- Ako korisnik nije prijavljen <a href="/login">Prijava</a>-->
 
   <iframe id="datatable-frame" src="datatable.html" frameborder="0" width="100%" height="600px"></iframe>
 
   <script>
+
     document.addEventListener('DOMContentLoaded', function () {
       const downloadCsvButton = document.getElementById('download-csv');
       const downloadJsonButton = document.getElementById('download-json');
       const datatableFrame = document.getElementById('datatable-frame');
 
-      downloadCsvButton.addEventListener('click', async () => {
-        try {
-          const csvData = await downloadDataAsCsv(datatableFrame);
-          const blob = new Blob([csvData], { type: 'text/csv' });
-          const url = window.URL.createObjectURL(blob);
-          const a = document.createElement('a');
-          a.href = url;
-          a.download = 'data.csv';
-          a.click();
-          window.URL.revokeObjectURL(url);
-        } catch (error) {
-          console.error('Error:', error);
+        downloadCsvButton.addEventListener('click', async () => {
+          try {
+            const csvData = await downloadDataAsCsv(datatableFrame);
+            const blob = new Blob([csvData], { type: 'text/csv' });
+            const url = window.URL.createObjectURL(blob);
+            const a = document.createElement('a');
+            a.href = url;
+            a.download = 'data.csv';
+            a.click();
+            window.URL.revokeObjectURL(url);
+          } catch (error) {
+            console.error('Error:', error);
+          }
+        });
+
+        downloadJsonButton.addEventListener('click', async () => {
+          try {
+            const jsonData = await downloadDataAsJson(datatableFrame);
+            const blob = new Blob([JSON.stringify(jsonData, null, 2)], { type: 'application/json' });
+            const url = window.URL.createObjectURL(blob);
+            const a = document.createElement('a');
+            a.href = url;
+            a.download = 'data.json';
+            a.click();
+            window.URL.revokeObjectURL(url);
+          } catch (error) {
+            console.error('Error:', error);
+          }
+        });
+
+        async function downloadDataAsCsv(iframe) {
+          const table = iframe.contentDocument.getElementById('data-table');
+          const rows = Array.from(table.querySelectorAll('tr'));
+          const csvData = rows.map(row => {
+            const columns = Array.from(row.querySelectorAll('td'));
+            return columns.map(column => column.innerText).join(',');
+          }).join('\n');
+          return csvData;
         }
-      });
 
-      downloadJsonButton.addEventListener('click', async () => {
-        try {
-          const jsonData = await downloadDataAsJson(datatableFrame);
-          const blob = new Blob([JSON.stringify(jsonData, null, 2)], { type: 'application/json' });
-          const url = window.URL.createObjectURL(blob);
-          const a = document.createElement('a');
-          a.href = url;
-          a.download = 'data.json';
-          a.click();
-          window.URL.revokeObjectURL(url);
-        } catch (error) {
-          console.error('Error:', error);
-        }
-      });
-
-      async function downloadDataAsCsv(iframe) {
-        const table = iframe.contentDocument.getElementById('data-table');
-        const rows = Array.from(table.querySelectorAll('tr'));
-        const csvData = rows.map(row => {
-          const columns = Array.from(row.querySelectorAll('td'));
-          return columns.map(column => column.innerText).join(',');
-        }).join('\n');
-        return csvData;
-      }
-
-      async function downloadDataAsJson(iframe) {
-        const table = iframe.contentDocument.getElementById('data-table');
-        const rows = Array.from(table.querySelectorAll('tr'));
-        const jsonData = rows.slice(1).map(row => {
-          const columns = Array.from(row.querySelectorAll('td'));
-          const rowData = {};
-          columns.forEach((column, index) => {
-            const columnName = table.rows[0].cells[index].textContent.toLowerCase().replace(/\s/g, '');
-            rowData[columnName] = column.textContent;
+        async function downloadDataAsJson(iframe) {
+          const table = iframe.contentDocument.getElementById('data-table');
+          const rows = Array.from(table.querySelectorAll('tr'));
+          const jsonData = rows.slice(1).map(row => {
+            const columns = Array.from(row.querySelectorAll('td'));
+            const rowData = {};
+            columns.forEach((column, index) => {
+              const columnName = table.rows[0].cells[index].textContent.toLowerCase().replace(/\s/g, '');
+              rowData[columnName] = column.textContent;
+            });
+            return rowData;
           });
-          return rowData;
-        });
-        return jsonData;
-      }
-    });
-
-
-    function updateActor() {
-      const ime = document.getElementById('update-ime').value;
-      const prezime = document.getElementById('update-prezime').value;
-
-      // Provjera jesu li ime i prezime uneseni
-      if (!ime || !prezime) {
-        alert('Ime i prezime su obavezna polja.');
-        return;
-      }
-
-      if (!dob && !datumrodenja && !zemljarodenja && !visina && !bojaociju && !brojosvojenihoscara && !networth && !naslov) {
-        alert('Mora biti upisan barem jedan dodatni atribut uz ime i prezime.');
-        res.json({ message: 'Mora biti upisan barem jedan dodatni atribut uz ime i prezime.' });
-        return res.status(400).json({ error: 'Mora biti upisan barem jedan dodatni atribut uz ime i prezime.' });
-
-      }
-      fetch('http://localhost:3000/api/update', {
-        method: 'PUT',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify({
-          ime: ime,
-          prezime: prezime,
-          dob: document.getElementById('update-dob').value,
-          datumrodenja: document.getElementById('update-datumrodenja').value,
-          zemljarodenja: document.getElementById('update-zemljarodenja').value,
-          visina: document.getElementById('update-visina').value,
-          bojaociju: document.getElementById('update-bojaociju').value,
-          brojosvojenihoscara: document.getElementById('update-brojosvojenihoscara').value,
-          networth: document.getElementById('update-networth').value,
-          naslov: document.getElementById('update-naslov').value,
-        }),
-      })
-        .then((response) => response.json())
-        .then((data) => {
-          alert(data.message);
-          location.reload();
-
-        })
-
-        .catch((error) => {
-          console.error('Error:', error);
-        });
-    }
-
-    async function addActor() {
-      try {
-        const ime = document.getElementById('ime').value;
-        const prezime = document.getElementById('prezime').value;
-        const dob = document.getElementById('dob').value;
-        const datumrodenja = document.getElementById('datumrodenja').value;
-        const zemljarodenja = document.getElementById('zemljarodenja').value;
-        const visina = document.getElementById('visina').value;
-        const bojaociju = document.getElementById('bojaociju').value;
-        const brojosvojenihoscara = document.getElementById('brojosvojenihoscara').value;
-        const networth = document.getElementById('networth').value;
-        const naslov = document.getElementById('naslov').value;
-
-        const response = await fetch('http://localhost:3000/api/add', {
-          method: 'POST',
-          headers: {
-            'Content-Type': 'application/json',
-          },
-          body: JSON.stringify({
-            ime,
-            prezime,
-            dob,
-            datumrodenja,
-            zemljarodenja,
-            visina,
-            bojaociju,
-            brojosvojenihoscara,
-            networth,
-            naslov,
-          }),
-        });
-
-
-        if (!ime || !prezime || !dob || !datumrodenja || !zemljarodenja || !visina || !bojaociju || !brojosvojenihoscara || !networth || !naslov) {
-          document.getElementById('error-message').innerText = 'Svi atributi moraju biti dostavljeni.';
-          return;
+          return jsonData;
         }
-
-
-        if (!response.ok) {
-          throw new Error(`Greška prilikom dodavanja glumca: ${response.statusText}`);
-        }
-
-        // Uspješan odgovor, osvježite stranicu
-        location.reload();
-
-      } catch (error) {
-        console.error('Greška prilikom dodavanja glumca:', error.message);
-      }
-    }
-
-
-    async function deleteActor() {
-    try {
-      const ime = document.getElementById('delete-ime').value;
-      const prezime = document.getElementById('delete-prezime').value;
-
-      const response = await fetch('http://localhost:3000/api/delete', {
-        method: 'DELETE',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify({
-          ime,
-          prezime,
-        }),
       });
-
-      if (!response.ok) {
-        throw new Error(`Greška prilikom brisanja glumca: ${response.statusText}`);
-      }
-
-      // Uspješan odgovor, osvježite stranicu
-      alert('Uspješno izbrisano!');
-      location.reload();
-    } catch (error) {
-      console.error('Greška prilikom brisanja glumca:', error.message);
-    }
-  }
-
-  
 
 
   function displayActorResult(actorData) {
@@ -330,10 +113,27 @@
       <p>ID: ${actorData.glumacid}</p>
       <p>Ime: ${actorData.ime}</p>
       <p>Prezime: ${actorData.prezime}</p>
-      <!-- Dodajte ostale podatke o glumcu prema potrebi -->
     `;
   }
 
+  function logout() {
+    /* fetch('/logout', {
+      method: 'GET',
+      credentials: 'same-origin', // Da bi se poslali kolačići sa zahtjevom
+    })
+    .then(response => {
+      if (response.ok) {
+        // Ako je odjava uspješna, ažuriraj trenutnu stranicu
+        window.location.href = '/';
+      } else {
+        console.error('Neuspješna odjava. Status odgovora:', response.status);
+      }
+    })
+    .catch(error => {
+      console.error('Error during logout:', error);
+    }); */
+    isAuthenticated = false;
+  }
 
   </script>
 </body>
