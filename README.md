@@ -18,11 +18,11 @@ Skup podataka o glumcima sadrži sljedeće atribute:
 - **bojaociju**: Boja očiju glumca
 - **brojosvojenihoscara**: Koliko je glumac osvojio Oscara
 - **networth$**: Koliki je približni net worth glumca izražen u američkim dolarima
-- **glumiu**: Popis i vrsta (film/serija) djela u kojima je glumac glumio
+- **naslov**: Film/serija u kojima je glumac glumio
 
 ## Informacije o ažuriranju
 - **Datum početka rada**: 29.10.2023.
-- **Datum posljednjih izmjena**: 13.11.2023.
+- **Datum posljednjih izmjena**: 13.01.2024.
 - **Redovitost ažuriranja**: Ovisno o potrebi/terminu laboratorijskih vježbi
 
 ## Formati podataka
