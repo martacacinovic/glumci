@@ -1,0 +1,32 @@
+{
+  "@context": {
+  "person": "https://schema.org/Person"
+ },
+  "@type": "Person",
+  "givenName": "Jennifer",
+  "familyName": "Lawrence",
+  "birthDate": "1990-08-15",
+  "height": "175 cm",
+  "eyeColor": "blue",
+  "birthPlace": {
+    "@type": "Place",
+    "address": {
+      "@type": "PostalAddress",
+      "addressCountry": {
+        "@type": "Country",
+        "name": "USA"
+      }
+    }
+  },
+  "netWorth": {
+    "@type": "MonetaryAmount",
+    "currency": "USD",
+    "value": 160000000
+  },
+  "actor": [
+    {
+      "@type": "Movie",
+      "name": "Passengers"
+    }
+  ]
+}

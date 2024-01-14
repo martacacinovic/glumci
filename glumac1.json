@@ -1,0 +1,32 @@
+{
+  "@context": {
+  "person": "https://schema.org/Person"
+ },
+  "@type": "Person",
+  "givenName": "Victoria",
+  "familyName": "Pedretti",
+  "birthDate": "1995-03-23",
+  "height": "160 cm",
+  "eyeColor": "blue",
+  "birthPlace": {
+    "@type": "Place",
+    "address": {
+      "@type": "PostalAddress",
+      "addressCountry": {
+        "@type": "Country",
+        "name": "USA"
+      }
+    }
+  },
+  "netWorth": {
+    "@type": "MonetaryAmount",
+    "currency": "USD",
+    "value": 1000000
+  },
+  "actor": [
+    {
+      "@type": "TVSeries",
+      "name": "You"
+    }
+  ]
+}
